@@ -1,0 +1,183 @@
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(180deg, rgb(9,151,136) 120px, rgb(219,219,211) 0px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height: 100%;
+}
+
+/* CONTAINER */
+#container{
+    background-color: white;
+    width: 1140px;
+    height: 780px;
+    display: flex;
+}
+
+/* CONTACT */
+#container #control-panel{
+    width: 35%;
+    height: 100%;
+    background-color: darkblue;
+
+}
+
+/*  USER PROFILE */
+#control-panel .user-profile{
+    height: 70px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#control-panel .user-profile .user-info{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.user-info img{
+    height: 60px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+#container .options a{
+    font-size: 1.5rem;
+    color: grey;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* NOTIFY */
+#control-panel .notify{
+    height: 80px;
+    background-color: rgb(144, 214, 255);
+    display: flex;
+    align-items: center;
+}
+
+.notify i{
+    font-size: 1.5rem;
+    color: rgb(144, 214, 255);
+    background-color: white;
+    border-radius: 50%;
+    height: 60px;
+    padding: 15px;
+    margin: 8px;
+}
+
+.notify a{
+    color: grey;
+    font-size: 0.8rem;
+}
+
+/* SEARCH */
+#control-panel .search{
+    height: 50px;
+    background-color: rgb(229, 229, 229);
+    padding: 8px;
+}
+
+.search input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/* CONTACTS */
+#control-panel .contacts{
+    background-color: rgb(255, 255, 255);
+    height: 580px;
+    overflow-y: auto;
+}
+
+.contacts li{
+    display: flex;
+    padding: 10px;
+    border-top: 0.5px solid lightgray;
+}
+
+.contacts li img{
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* CHAT */
+#container #chat{
+    width: 65%;
+    height: 100%;
+    background-color: brown;
+}
+
+/* CONTACT PROFILE */
+#chat .contact-profile{
+    height: 70px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid rgb(193, 193, 193);
+}
+
+#chat .contact-profile .contact-info{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info img{
+    height: 60px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+/* CHAT DISPLAY */
+#chat .chat-display{
+    height: 630px;
+    overflow-y: auto;
+    background-image: url(img/mine.jpg);
+}
+
+/* TEXT FIELD */
+#chat .text-field{
+    height: 80px;
+    background-color: rgb(243,238,234);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.text-field a{
+    font-size: 1.5rem;
+    color: grey;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.text-field input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 0 15px;
+}

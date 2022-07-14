@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+    <title>Vue Boolzapp</title>
+</head>
+<body>
+
+    <!-- container -->
+    <div id="container">
+
+        <!-- contact -->
+        <div id="control-panel">
+
+            <!-- user profile -->
+            <div class="user-profile">
+                <div class="user-info">
+                    <img src="img/avatar_1.jpg" alt="">
+                    <p>Nome Utente</p>
+                </div>
+                <div class="options">
+                    <a href=""><i class="fa-solid fa-circle-notch"></i></a>
+                    <a href=""><i class="fa-solid fa-message"></i></a>
+                    <a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+            </div>
+
+            <!-- notify -->
+            <div class="notify">
+                <i class="fa-solid fa-bell-slash"></i>
+                <div class="text">
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <a href="">Attiva notifiche desktop</a>
+                </div>
+            </div>
+
+            <!-- search -->
+            <div class="search">
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+
+            <!-- contacts -->
+            <div class="contacts">
+                <ul>
+                    <li>
+                        <img src="img/avatar_2.jpg" alt="">
+                        <p>Mario</p>
+                    </li>
+                    <li>
+                        <img src="img/avatar_3.jpg" alt="">
+                        <p>Sergio</p>
+                    </li>
+                    <li>
+                        <img src="img/avatar_4.jpg" alt="">
+                        <p>Carlo</p>
+                    </li>
+                    <li>
+                        <img src="img/avatar_5.jpg" alt="">
+                        <p>Calogero</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- chat -->
+        <div id="chat">
+
+            <!-- contact profile -->
+            <div class="contact-profile">
+                <div class="contact-info">
+                    <img src="img/avatar_2.jpg" alt="">
+                    <p>Mario</p>
+                </div>
+                <div class="options">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href=""><i class="fa-solid fa-paperclip"></i></a>
+                    <a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+            </div>
+
+            <!-- chat display -->
+            <div class="chat-display">
+            </div>
+
+            <!-- text field -->
+            <div class="text-field">
+                <a href=""><i class="fa-regular fa-face-smile"></i></a>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <a href=""><i class="fa-solid fa-microphone"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
