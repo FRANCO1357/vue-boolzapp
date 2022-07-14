@@ -124,7 +124,6 @@ img{
 #container #chat{
     width: 65%;
     height: 100%;
-    background-color: brown;
 }
 
 /* CONTACT PROFILE */
@@ -155,6 +154,37 @@ img{
     overflow-y: auto;
     background-image: url(img/mine.jpg);
 }
+
+/* MESSAGE */
+.chat-display .contact-message{
+    min-height: 50px;
+    padding: 10px;
+}
+
+.chat-display .user-message{
+    min-height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.chat-display .message{
+    min-height: 50px;
+    min-width: 100px;
+    max-width: 400px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.contact-message .message{
+    background-color: white;
+}
+
+.user-message .message{
+    background-color: rgb(213,249,186);
+}
+
+
 
 /* TEXT FIELD */
 #chat .text-field{
