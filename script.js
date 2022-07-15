@@ -99,9 +99,13 @@ const root = new Vue({
             this.currentContact = i;
         },
         sendMessage(){
-            this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: this.newMessage, status: 'sent,'});
+            this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: this.newMessage, status: 'sent',});
             this.newMessage = '';
-        }
+            setTimeout(this.receivedMessage, 2000);
+        },
+        receivedMessage() {
+            this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: 'Ok', status: 'received',});
+          },
     },
     
 });
