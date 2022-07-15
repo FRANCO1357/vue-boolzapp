@@ -76,7 +76,7 @@
 
             <!-- chat display -->
             <div class="chat-display">
-                <div v-for="message in contacts[1].messages" class="message user">
+                <div v-for="message in contacts[2].messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact'">
                     <div class="box-message">
                         <p>{{message.text}}</p>
                         <small>{{message.date}}</small>
