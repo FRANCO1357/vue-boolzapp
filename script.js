@@ -114,16 +114,6 @@ const root = new Vue({
         receivedMessage() {
             this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: 'Ok', status: 'received',});
         },
-        // searchContact(){
-        //     const searchList = [];
-
-        //     this.contacts.filter((contact) => {
-        //         if (contact.name.toLowerCase().indexOf(this.filteredQuery.toLowerCase()) != -1) {
-        //           contactsList.push(contact);
-        //         }
-        //     });
-
-        // },
     },
     
 });
