@@ -21,10 +21,10 @@ img{
 
 /* CONTAINER */
 #container{
-    background-color: white;
     width: 1140px;
     height: 780px;
     display: flex;
+    box-shadow: 0 2px 20px rgb(114, 114, 114);
 }
 
 /* CONTACT */
@@ -186,6 +186,13 @@ img{
 
 .contact .box-message{
     background-color: white;
+}
+
+.message small{
+    display: block;
+    text-align: right;
+    color: grey;
+    margin-top: 5px;
 }
 
 /* TEXT FIELD */

@@ -64,8 +64,8 @@
             <!-- contact profile -->
             <div class="contact-profile">
                 <div class="contact-info">
-                    <img src="img/avatar_2.jpg" alt="">
-                    <p>Mario</p>
+                    <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt="">
+                    <p>{{contacts[0].name}}</p>
                 </div>
                 <div class="options">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -76,14 +76,11 @@
 
             <!-- chat display -->
             <div class="chat-display">
-                <div class="message user">
-                    <div class="box-message"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum culpa, asperiores laboriosam quae nulla facere ab temporibus id eos nihil doloribus maxime eligendi obcaecati veniam saepe in iste debitis.</p></div>
-                </div>
-                <div class="message contact">
-                    <div class="box-message"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cupiditate quia odio ratione, rerum iure. Quidem tempore delectus dolores quisquam id beatae odio, laborum harum aliquid voluptate quas ipsum earum.</p></div>
-                </div>
-                <div class="message user">
-                    <div class="box-message"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum culpa, asperiores laboriosam quae nulla facere ab temporibus id eos nihil doloribus maxime eligendi obcaecati veniam saepe in iste debitis.</p></div>
+                <div v-for="message in contacts[1].messages" class="message user">
+                    <div class="box-message">
+                        <p>{{message.text}}</p>
+                        <small>{{message.date}}</small>
+                    </div>
                 </div>
             </div>
 
