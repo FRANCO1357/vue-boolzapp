@@ -38,7 +38,7 @@ img{
 /*  USER PROFILE */
 #control-panel .user-profile{
     height: 70px;
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(234,234,234);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +89,7 @@ img{
 /* SEARCH */
 #control-panel .search{
     height: 50px;
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(234,234,234);
     padding: 8px;
 }
 
@@ -112,6 +112,7 @@ img{
     display: flex;
     padding: 10px;
     border-top: 0.5px solid lightgray;
+    cursor: pointer;
 }
 
 .contacts li img{
@@ -129,7 +130,7 @@ img{
 /* CONTACT PROFILE */
 #chat .contact-profile{
     height: 70px;
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(234,234,234);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,35 +157,38 @@ img{
 }
 
 /* MESSAGE */
-.chat-display .contact-message{
-    min-height: 50px;
-    padding: 10px;
-}
-
-.chat-display .user-message{
-    min-height: 50px;
-    padding: 10px;
-    display: flex;
-    justify-content: end;
-}
-
 .chat-display .message{
     min-height: 50px;
-    min-width: 100px;
-    max-width: 400px;
-    border-radius: 5px;
-    padding: 10px;
 }
 
-.contact-message .message{
-    background-color: white;
+.message.user{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
-.user-message .message{
+.message.contact{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.box-message{
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.user .box-message{
     background-color: rgb(213,249,186);
 }
 
-
+.contact .box-message{
+    background-color: white;
+}
 
 /* TEXT FIELD */
 #chat .text-field{

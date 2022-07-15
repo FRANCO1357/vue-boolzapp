@@ -50,23 +50,10 @@
             <!-- contacts -->
             <div class="contacts">
                 <ul>
-                    <li>
-                        <img src="img/avatar_2.jpg" alt="">
-                        <p>Mario</p>
+                    <li v-for="(contact, i) in contacts">
+                        <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                        <p>{{contact.name}}</p>
                     </li>
-                    <li>
-                        <img src="img/avatar_3.jpg" alt="">
-                        <p>Sergio</p>
-                    </li>
-                    <li>
-                        <img src="img/avatar_4.jpg" alt="">
-                        <p>Carlo</p>
-                    </li>
-                    <li>
-                        <img src="img/avatar_5.jpg" alt="">
-                        <p>Calogero</p>
-                    </li>
-                    
                 </ul>
             </div>
         </div>
@@ -89,20 +76,13 @@
 
             <!-- chat display -->
             <div class="chat-display">
-                <div class="contact-message">
-                    <div class="message">Ciao mi chiamo Francesco</div>
+                <div class="message user">
+                    <div class="box-message"><p></p></div>
+                    <div class="box-message"></div>
                 </div>
-                <div class="user-message">
-                    <div class="message">Piacere di conoscerti Francesco Piacere di conoscerti Francesco Piacere di conoscerti Francesco Piacere di conoscerti Francesco</div>
-                </div>
-                <div class="user-message">
-                    <div class="message">Piacere di conoscerti Francesco Piacere di conoscerti Francesco Piacere di conoscerti Francesco Piacere di conoscerti Francesco</div>
-                </div>
-                <div class="user-message">
-                    <div class="message">Piacere di conoscerti Francesco Piacere di conoscerti Francesco Piacere di conoscerti Francesco Piacere di conoscerti Francesco</div>
-                </div>
-                <div class="contact-message">
-                    <div class="message">Ciao mi chiamo Francesco</div>
+                <div class="message contact">
+                    <div class="box-message"></div>
+                    <div class="box-message"></div>
                 </div>
             </div>
 
