@@ -8,6 +8,7 @@ const root = new Vue({
     data: {
         currentContact: '0',
         newMessage: '',
+        search: '',
         user: {
             name: 'Chiara',
             avatar: '_io',
@@ -94,6 +95,13 @@ const root = new Vue({
             },
           ]
     },
+    computed: {
+        filteredContacts(){
+            return this.contacts.filter((contact) =>{
+                return contact.name.toLowerCase().includes(this.search.toLowerCase());
+            });
+        },
+    },
     methods: {
         getContactChat(i){
             this.currentContact = i;
@@ -105,7 +113,17 @@ const root = new Vue({
         },
         receivedMessage() {
             this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: 'Ok', status: 'received',});
-          },
+        },
+        // searchContact(){
+        //     const searchList = [];
+
+        //     this.contacts.filter((contact) => {
+        //         if (contact.name.toLowerCase().indexOf(this.filteredQuery.toLowerCase()) != -1) {
+        //           contactsList.push(contact);
+        //         }
+        //     });
+
+        // },
     },
     
 });

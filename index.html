@@ -44,13 +44,13 @@
 
             <!-- search -->
             <div class="search">
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input v-model="search" type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
 
             <!-- contacts -->
             <div class="contacts">
                 <ul>
-                    <li v-for="(contact, i) in contacts" v-on:click="getContactChat(i)">
+                    <li v-for="(contact, i) in filteredContacts" v-on:click="getContactChat(i)">
                         <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                         <p>{{contact.name}}</p>
                     </li>
