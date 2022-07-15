@@ -23,8 +23,8 @@
             <!-- user profile -->
             <div class="user-profile">
                 <div class="user-info">
-                    <img src="img/avatar_1.jpg" alt="">
-                    <p>Nome Utente</p>
+                    <img :src="`img/avatar${user.avatar}.jpg`" alt="">
+                    <p>{{user.name}}</p>
                 </div>
                 <div class="options">
                     <a href=""><i class="fa-solid fa-circle-notch"></i></a>
