@@ -64,8 +64,8 @@
             <!-- contact profile -->
             <div class="contact-profile">
                 <div class="contact-info">
-                    <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt="">
-                    <p>{{contacts[0].name}}</p>
+                    <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" alt="">
+                    <p>{{contacts[currentContact].name}}</p>
                 </div>
                 <div class="options">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -76,7 +76,7 @@
 
             <!-- chat display -->
             <div class="chat-display">
-                <div v-for="message in currentContact.messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact'">
+                <div v-for="(message, i) in contacts[currentContact].messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact'">
                     <div class="box-message">
                         <p>{{message.text}}</p>
                         <small>{{message.date}}</small>
