@@ -113,6 +113,15 @@ img{
     padding: 10px;
     border-top: 0.5px solid lightgray;
     cursor: pointer;
+    position: relative;
+}
+
+.contacts .date{
+    color: grey;
+    position: absolute;
+    margin-top: 0;
+    top: 8px;
+    right: 8px;
 }
 
 .contacts li img{
@@ -147,6 +156,11 @@ img{
     height: 60px;
     border-radius: 50%;
     margin: 8px;
+}
+
+small{
+    color: grey;
+    margin-top: 5px;
 }
 
 /* CHAT DISPLAY */

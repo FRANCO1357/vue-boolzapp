@@ -52,7 +52,11 @@
                 <ul>
                     <li v-for="(contact, i) in filteredContacts" v-on:click="getContactChat(i)">
                         <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
-                        <p>{{contact.name}}</p>
+                        <div class="text">
+                            <p>{{contact.name}}</p>
+                            <small>{{lastMessage(contact)}}</small>
+                        </div>
+                        <small class="date">{{lastMessageDate(contact)}}</small>
                     </li>
                 </ul>
             </div>
@@ -65,7 +69,10 @@
             <div class="contact-profile">
                 <div class="contact-info">
                     <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" alt="">
-                    <p>{{contacts[currentContact].name}}</p>
+                    <div class="text">
+                        <p>{{contacts[currentContact].name}}</p>
+                        <small>Ultimo accesso oggi alle: {{contacts[currentContact].messages[0].date}}</small>
+                    </div>
                 </div>
                 <div class="options">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>

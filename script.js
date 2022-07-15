@@ -114,6 +114,12 @@ const root = new Vue({
         receivedMessage() {
             this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: 'Ok', status: 'received',});
         },
+        lastMessageDate(contact) {
+            return contact.messages[contact.messages.length - 1].date;
+        },
+        lastMessage(contact) {
+            return contact.messages[contact.messages.length - 1].text;
+        },
     },
     
 });
