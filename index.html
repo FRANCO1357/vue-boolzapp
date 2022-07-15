@@ -50,7 +50,7 @@
             <!-- contacts -->
             <div class="contacts">
                 <ul>
-                    <li v-for="(contact, i) in contacts">
+                    <li v-for="(contact, i) in contacts" v-on:click="getContactChat(i)">
                         <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                         <p>{{contact.name}}</p>
                     </li>
@@ -76,7 +76,7 @@
 
             <!-- chat display -->
             <div class="chat-display">
-                <div v-for="message in contacts[2].messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact'">
+                <div v-for="message in currentContact.messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact'">
                     <div class="box-message">
                         <p>{{message.text}}</p>
                         <small>{{message.date}}</small>

@@ -6,8 +6,9 @@ const root = new Vue({
     name: 'whatsapp',
     el: '#container',
     data: {
+        currentContact: '',
         user: {
-            name: 'Nome Utente',
+            name: 'Chiara',
             avatar: '_io',
         },
         contacts: [
@@ -93,6 +94,11 @@ const root = new Vue({
           ]
     },
     methods: {
+        getContactChat(i){
+            this.contacts.forEach((clickedContact, index) => {
+                if (index === i) this.currentContact = clickedContact;
+              });
+        },
     },
     
 });
