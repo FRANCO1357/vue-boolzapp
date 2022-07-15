@@ -7,6 +7,7 @@ const root = new Vue({
     el: '#container',
     data: {
         currentContact: '0',
+        newMessage: '',
         user: {
             name: 'Chiara',
             avatar: '_io',
@@ -97,6 +98,10 @@ const root = new Vue({
         getContactChat(i){
             this.currentContact = i;
         },
+        sendMessage(){
+            this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: this.newMessage, status: 'sent,'});
+            this.newMessage = '';
+        }
     },
     
 });
