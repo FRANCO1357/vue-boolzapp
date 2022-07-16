@@ -54,7 +54,7 @@
                         <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                         <div class="text">
                             <p>{{contact.name}}</p>
-                            <small>{{lastMessage(contact)}}</small>
+                            <small>{{lastMessageMaxLength(contact)}}</small>
                         </div>
                         <small class="date">{{lastMessageDate(contact)}}</small>
                     </li>

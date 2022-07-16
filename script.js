@@ -120,6 +120,11 @@ const root = new Vue({
         lastMessage(contact) {
             return contact.messages[contact.messages.length - 1].text;
         },
+        lastMessageMaxLength(contact){
+            const maxLength = 20;
+
+            return this.lastMessage(contact).length > maxLength ? this.lastMessage(contact).substring(0, maxLength) + "..." : this.lastMessage(contact);
+        }
     },
     
 });
