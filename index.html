@@ -83,10 +83,11 @@
 
             <!-- chat display -->
             <div class="chat-display">
-                <div v-for="(message, i) in contacts[currentContact].messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact'">
+                <div v-for="(message, i) in contacts[currentContact].messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact' ">
                     <div class="box-message">
-                        <p>{{message.text}}</p>
+                        <p>{{message.text}}<i v-on:click="getMessage(message, i)" class="fa-solid fa-angle-down"></i></p>
                         <small>{{message.date}}</small>
+                        <div class="message-options" :class="currentMessage === i ? 'active' : '' ">Cancella messaggio</div>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ const root = new Vue({
     el: '#container',
     data: {
         currentContact: '0',
+        currentMessage: '',
         newMessage: '',
         search: '',
         user: {
@@ -105,6 +106,10 @@ const root = new Vue({
     methods: {
         getContactChat(i){
             this.currentContact = i;
+            this.currentMessage = '';
+        },
+        getMessage(message, i){
+            this.currentMessage = i;
         },
         sendMessage(){
             this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: this.newMessage, status: 'sent',});
@@ -124,7 +129,7 @@ const root = new Vue({
             const maxLength = 20;
 
             return this.lastMessage(contact).length > maxLength ? this.lastMessage(contact).substring(0, maxLength) + "..." : this.lastMessage(contact);
-        }
+        },
     },
     
 });
