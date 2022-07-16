@@ -191,6 +191,7 @@ small{
     max-width: 500px;
     margin: 10px;
     padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.211);
     border-radius: 5px;
     position: relative;
 }
@@ -214,6 +215,18 @@ small{
     cursor: pointer;
 }
 
+.fa-solid.fa-angle-up{
+    display: none;
+}
+
+.fa-solid.fa-angle-up.active{
+    display: block;
+}
+
+.fa-solid.fa-angle-down.d-none{
+    display: none;
+}
+
 .message small{
     display: block;
     text-align: right;
@@ -224,6 +237,7 @@ small{
 .message-options{
     display: none;
     background-color: white;
+    box-shadow: 0 0 10px rgb(60, 60, 60);
     position: absolute;
     top: 90%;
     right: 0;

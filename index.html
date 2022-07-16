@@ -85,7 +85,7 @@
             <div class="chat-display">
                 <div v-for="(message, i) in contacts[currentContact].messages" class="message" :class="message.status === 'sent' ? 'user' : 'contact' ">
                     <div class="box-message">
-                        <p>{{message.text}}<i v-on:click="getMessage(message, i)" class="fa-solid fa-angle-down"></i></p>
+                        <p>{{message.text}}<i v-on:click="getMessage(message, i)" class="fa-solid fa-angle-down" :class="currentMessage === i ? 'd-none' : '' " ></i><i v-on:click="getMessage(message, i)" class="fa-solid fa-angle-up" :class="currentMessage === i ? 'active' : '' "></i></p>
                         <small>{{message.date}}</small>
                         <div class="message-options" :class="currentMessage === i ? 'active' : '' ">Cancella messaggio</div>
                     </div>
