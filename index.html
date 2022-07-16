@@ -87,7 +87,7 @@
                     <div class="box-message">
                         <p>{{message.text}}<i v-on:click="getMessage(message, i)" class="fa-solid fa-angle-down" :class="currentMessage === i ? 'd-none' : '' " ></i><i v-on:click="getMessage(message, i)" class="fa-solid fa-angle-up" :class="currentMessage === i ? 'active' : '' "></i></p>
                         <small>{{message.date}}</small>
-                        <div class="message-options" :class="currentMessage === i ? 'active' : '' ">Cancella messaggio</div>
+                        <div v-on:click="delateMessage(message)" class="message-options" :class="currentMessage === i ? 'active' : '' ">Cancella messaggio</div>
                     </div>
                 </div>
             </div>

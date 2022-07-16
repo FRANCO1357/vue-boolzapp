@@ -115,6 +115,9 @@ const root = new Vue({
               this.currentMessage = i;
             }
         },
+        delateMessage(message){
+          this.contacts[this.currentContact].messages.splice(this.currentMessage, 1);
+        },
         sendMessage(){
             this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: this.newMessage, status: 'sent',});
             this.newMessage = '';
