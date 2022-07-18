@@ -7,7 +7,8 @@ const root = new Vue({
     el: '#container',
     data: {
         currentContact: '0',
-        currentMessage: '',
+        currentMessageIndex: '',
+        showMessageMenu: false,
         newMessage: '',
         search: '',
         user: {
@@ -105,18 +106,15 @@ const root = new Vue({
     },
     methods: {
         getContactChat(i){
-            this.currentContact = i;
-            this.currentMessage = '';
+          this.currentContact = i;
+        },      
+        showMenu(index){
+          this.showMessageMenu = !this.showMessageMenu;
+          this.currentMessageIndex = index;
+          console.log(this.showMessageMenu)
         },
-        getMessage(message, i){
-            if (this.currentMessage !== ''){
-              this.currentMessage = '';
-            } else{
-              this.currentMessage = i;
-            }
-        },
-        delateMessage(message){
-          this.contacts[this.currentContact].messages.splice(this.currentMessage, 1);
+        deleteMessage(index){
+          this.contacts[this.currentContact].messages.splice(index, 1);
         },
         sendMessage(){
             this.contacts[this.currentContact].messages.push({date: '10/01/2020 15:30:55', text: this.newMessage, status: 'sent',});
